@@ -4,13 +4,15 @@
         "moduleResolution": "node",
         "pretty": true,
         "sourceMap": true,
+        "types": ["jest", "node"],
+        "paths": {
+          "@modules/*": ["./src/modules/*"]
+        },
         "target": "es6",
         "outDir": "./dist",
         "baseUrl": "./src"
     },
-    "include": [
-        "src/**/*.ts"
-    ],
+    "include": ["src", "__tests__"],
     "exclude": [
         "node_modules"
     ]
