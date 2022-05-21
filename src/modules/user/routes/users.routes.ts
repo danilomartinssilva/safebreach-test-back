@@ -8,5 +8,8 @@ usersRouter.route('/').get(usersController.index);
 usersRouter.route('/:userId').delete(usersController.destroyUser);
 usersRouter.route('/').post(usersController.createUser);
 usersRouter.route('/').put(usersController.updateUser)
+usersRouter.route('/search').post(usersController.search)
+usersRouter.route('/:userId').get(usersController.findById)
+
 
 export default usersRouter;
