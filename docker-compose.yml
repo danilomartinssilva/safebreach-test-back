@@ -1,0 +1,12 @@
+version: "3"
+
+services:
+  back_safebreach:
+    build: .
+    ports:
+      - "3339:3339"
+    volumes:
+    - ./app:/app
+    command: npm run prod
+
+
