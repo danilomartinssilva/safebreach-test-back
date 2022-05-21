@@ -1,5 +1,6 @@
 FROM node:14-alpine
 
+RUN mkdir /usr/app
 WORKDIR /usr/app
 COPY package.json package-lock.json ./
 
@@ -7,9 +8,8 @@ RUN npm install
 
 COPY . .
 
-EXPOSE 3339
+
 RUN npm run build
 
-COPY ./dist ./dist
-
-CMD [ "node", "dist/src/server.js" ]
+EXPOSE 3339
+ENTRYPOINT  [ "node", "dist/src/server.js" ]
