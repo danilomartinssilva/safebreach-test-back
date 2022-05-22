@@ -4,8 +4,9 @@
   "description": "",
   "main": "server.js",
   "scripts": {
-    "start": "node server.js",
+    "start": "node build/src/server.js",
     "build": "npx tsc",
+    "postinstall": "npx tsc",
     "dev": "nodemon --watch 'src/' --exec 'npx ts-node src/server.ts' -e ts",
     "test": "jest --silent --runInBand",
     "prod": "node ./dist/src/server.js",
